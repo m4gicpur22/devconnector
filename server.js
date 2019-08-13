@@ -5,6 +5,9 @@ const app = express();
 
 connectDB();
 
+//parsers data passed for us
+app.use(express.json({extended: false}));
+
 app.get('/', (req, res) => res.send("API running!"));
 
 //intialize routes
